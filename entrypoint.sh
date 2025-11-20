@@ -58,7 +58,7 @@ list_pulls() {
   if [ -n "${INPUT_GITHUB_TOKEN}" ]; then
     curl -s -H "Authorization: token ${INPUT_GITHUB_TOKEN}" "${pulls_endpoint}"
   else
-    echo "INPUT_GITHUB_TOKEN is not available. Subscequent GitHub API call may fail due to API limit." >&2
+    echo "INPUT_GITHUB_TOKEN is not available. Subsequent GitHub API calls may fail due to API limit." >&2
     curl -s "${pulls_endpoint}"
   fi
 }
